@@ -1,0 +1,92 @@
+/* HeroSection.css */
+
+.hero-section {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../utils/asset/herosection-image.jpg') center/cover no-repeat;
+  height: 600px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5%;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.search-button {
+  background-color: #FFD700; /* Gold for the button */
+  color: #333; /* Dark text for contrast */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.search-button:hover {
+  background-color: #DAA520; /* Darker Gold on hover */
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 70%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+  padding: 0;
+  color: #333;
+  margin: 0;
+}
+
+.suggestion-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.suggestion-list li:last-child {
+  border-bottom: none;
+}
+
+.suggestion-list li:hover {
+  background-color: #f8f8f8;
+}

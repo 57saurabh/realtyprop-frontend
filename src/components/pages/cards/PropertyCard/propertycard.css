@@ -1,0 +1,85 @@
+/* PropertyCard.css */
+
+.property-card {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  .property-card:hover {
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
+  }
+  
+  .property-image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .property-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .property-details {
+    padding: 20px;
+  }
+  
+  .property-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .property-location {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .property-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .property-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .property-desc{
+    /* margin-bottom: 5px; */
+    font-size: 13px;
+    color: #555;
+  }
+  .feature {
+    background-color: #FFD700;
+    color: #333;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .view-details-button {
+    background-color: var(--highlight-color);
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.view-details-button:hover {
+    animation:  1s ease-in;
+    background-color: var(--sec-highlight-color);
+  } 
+  
+  

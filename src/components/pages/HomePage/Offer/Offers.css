@@ -1,0 +1,73 @@
+/* Offers.css */
+
+.offers {
+    max-width: 80%;
+    margin: 40px auto;
+  }
+  
+
+  .offers h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  .maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 10%;
+    margin: 2rem;
+  }
+  
+ .colomn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* .colomn div > svg {
+    margin-right: 20px;
+  } */
+  
+  .colomn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .colomn p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+.offer-icon{
+    color: var(--primary-color);
+}
+  
+.view-more-button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .view-more-button:hover {
+    background-color: var(--sec-highlight-color);
+  }
+  /* Optional: Add more styling or adjust as needed */
+  
+@media screen and (max-width: 600px) {
+    .maincontainer{
+      flex-direction: column;
+    }
+}

@@ -1,8 +1,13 @@
+@import url('./components/utils/commoncss/font.css');
+@import url('./components/utils/commoncss/common.css');  
+@import url('./components/utils/commoncss/variable.css');
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Glass Antiqua', cursive;
+font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
