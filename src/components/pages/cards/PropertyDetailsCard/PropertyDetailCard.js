@@ -91,7 +91,7 @@ const ProductDetailCard = () => {
           </>
           )
         }
-        <p><strong>Square Footage:</strong> {listing.squareFootage}</p>
+        <p><strong>Sqr.mt:</strong> {listing.squareFootage}</p>
         <p><strong>Description:</strong> {listing.description}</p>
        {
          listing.type==='plot'?'':
