@@ -28,7 +28,7 @@ function Offers() {
           <h3>Rental</h3>
           <p>Looking for a place to rent? We have a wide range of rental properties to suit all budgets and needs.</p>
           <div className="btn-center">
-          <Link to='/rent' className="view-more-button">View More</Link>
+          <Link to='/rentals' className="view-more-button">View More</Link>
           </div>
         </div>
         {/* Add more details or a link to the rental section */}
