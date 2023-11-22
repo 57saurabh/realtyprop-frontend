@@ -45,6 +45,8 @@ const Login = () => {
 
       const successMessage = response.data.message || "Login successful!";
       displayToastMessage(successMessage, "success");
+     
+  
     } catch (error) {
       console.error("Login failed:", error);
 
@@ -53,6 +55,11 @@ const Login = () => {
     } finally {
       setLoading(false); // Stop loading
     }
+
+    setLoginFormData({
+      email: '',
+      password: '',
+    });
   };
 
   const displayToastMessage = (message, type) => {

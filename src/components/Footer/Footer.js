@@ -1,10 +1,10 @@
 // Footer.js
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import logo from '../utils/asset/logos/logo-realtyProp.png'; // Replace with the actual path to your logo image
+import logo from '../utils/asset/logos/Realtyprop.png'; // Replace with the actual path to your logo image
 import './Footer.css';
 
-const locations = ['Indrapurema', 'Example City', 'Another Location', 'More Locations']; // Add your actual locations
+const locations = ['Indirapuram', 'Vaishali', 'Noida', 'Greater Noida', 'Wave City']; // Add your actual locations
 
 const Footer = () => {
   return (
@@ -17,7 +17,8 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/properties">Properties</a></li>
+            <li><a href="/all-properties">Properties</a></li>
+            <li><a href="/homesolution">Home Solutions</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>

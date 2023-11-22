@@ -15,7 +15,7 @@ const HeroSection = () => {
     // Example: Fetch location suggestions based on the input value
     // Replace this with your own logic to fetch suggestions from an API or data source
     // For simplicity, using a static array of suggestions
-    const fetchedSuggestions = ['City A', 'City B', 'City C'].filter((city) =>
+    const fetchedSuggestions = ['Indirapuram', 'Vaishali', 'Noida', 'Greater Noida', 'Wave City'].filter((city) =>
       city.toLowerCase().includes(value.toLowerCase())
     );
     setSuggestions(fetchedSuggestions);

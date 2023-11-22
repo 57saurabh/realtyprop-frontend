@@ -31,10 +31,10 @@ const SignUp = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-
+  
     try {
       setLoading(true);
-
+  
       // Ensure phone is sent as a string
       const formData = {
         name: signUpFormData.name,
@@ -42,24 +42,33 @@ const SignUp = () => {
         phoneNo: signUpFormData.phone.toString(),
         password: signUpFormData.password,
       };
-
+  
       const response = await axios.post("https://realtyprop-backend-production.up.railway.app/auth/register", formData);
-
-      // if (response.status === 200) {
-      //   sendVerificationEmail(formData.email);
-      // }
-
+  
       const successMessage = response.data.message || "Sign-up successful!";
       displayToastMessage(successMessage, "success");
+      window.alert(successMessage);
+  
+      // Reset form fields upon successful sign-up
+     
     } catch (error) {
       console.error("Sign-up failed:", error);
-
+  
       const errorMessage = error.message || "Sign-up failed. Please try again.";
       displayToastMessage(errorMessage, "error");
     } finally {
       setLoading(false);
+      setSignUpFormData({
+        name: '',
+        email: '',
+        phone: '',
+        password: '',
+      });
+  
     }
+
   };
+  
 
   const displayToastMessage = (message, type) => {
     setSuccess('');
