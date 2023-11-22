@@ -2,6 +2,7 @@
 import React from 'react';
 import './Offers.css';
 import { FaHome, FaBuilding, FaTools } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Offers() {
   return (
@@ -15,7 +16,7 @@ function Offers() {
           <h3>Buy</h3>
           <p>Find your dream home from our extensive list of properties for sale. We provide detailed information to help you make the best decision.</p>
           <div className="btn-center">
-          <button className="view-more-button">View More</button>
+          <Link to="/buy" className="view-more-button">View More</Link>
           </div>
         </div>
 
@@ -27,7 +28,7 @@ function Offers() {
           <h3>Rental</h3>
           <p>Looking for a place to rent? We have a wide range of rental properties to suit all budgets and needs.</p>
           <div className="btn-center">
-          <button className="view-more-button">View More</button>
+          <Link to='/rent' className="view-more-button">View More</Link>
           </div>
         </div>
         {/* Add more details or a link to the rental section */}
@@ -38,7 +39,7 @@ function Offers() {
           <h3>Home Solutions</h3>
           <p>From home loans to home shifting services, we offer comprehensive solutions to make your home buying process as smooth as possible.</p>
           <div className="btn-center">
-          <button className="view-more-button">View More</button>
+          <Link to='/homesolution' className="view-more-button">View More</Link>
           </div>
         </div>
         {/* Add more details or a link to the home solutions section */}

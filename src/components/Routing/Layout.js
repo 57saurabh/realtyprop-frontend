@@ -44,9 +44,24 @@ function Layout({children}) {
     },[])
   
   
+    useEffect(() => {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+    }, []);
+  
+    if (loading) {
+      return(
+        <Loader/>
+      )
+      }
+      else{
+
   return (
     <>{loading?<Loader/>:<>{children} </>}</>
   )
+      }
 }
 
 export default Layout

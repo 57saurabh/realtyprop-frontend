@@ -62,19 +62,7 @@ function MainRouting() {
 
 
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
-
-  if (loading) {
-    return(
-      <Loader/>
-    )
-    }
-    else{
+  
 
     
   return (
@@ -150,6 +138,6 @@ function MainRouting() {
     </Router>
   );
 }
-}
+
 
 export default MainRouting;

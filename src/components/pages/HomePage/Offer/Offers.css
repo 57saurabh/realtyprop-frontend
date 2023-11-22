@@ -50,8 +50,15 @@
 .offer-icon{
     color: var(--primary-color);
 }
+
+.btn-center{
+  margin-top: 20px;
+}
   
 .view-more-button {
+  margin-top: 20px;
+  font-size: 12px;
+  text-decoration: none;
     background-color: var(--highlight-color);
     color: var(--text-color);
     padding: 10px 15px;
