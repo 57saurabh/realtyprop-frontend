@@ -22,6 +22,7 @@ import UserContext from '../../Context/UserContext';
 import Layout from './Layout';
 import Termcondition from '../Footer/termscondition/Termcondition';
 import PrivacyPolicy from '../Footer/privacypolicy/PrivacyPolicy';
+import ScrollToTop from './ScrollToTop';
 
 
 
@@ -69,6 +70,7 @@ function MainRouting() {
     
   return (
     <Router>
+      <ScrollToTop/>
         <Navbar/>
       <Routes>
           <Route path="/" element={
