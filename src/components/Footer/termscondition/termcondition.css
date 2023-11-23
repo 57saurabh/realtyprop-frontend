@@ -1,0 +1,31 @@
+.tc-container{
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
+.tc-container h2{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+.tc-container ul {
+    margin: 0 auto;
+    width: 85%;
+    list-style: none;
+}
+.tc-container ul li{
+    text-align: justify;
+    padding: 10px 0;
+    color: var(--text-color);
+}
+.tc-container ul li strong{
+    font-weight: 800;
+    color: var(--primary-color);
+}
+.tc-container p{
+    font-weight: bold;
+    margin: 10px auto;
+    margin-bottom: 1rem;
+    padding: 10px;
+    color: var(--primary-color);
+}

@@ -20,6 +20,8 @@ import Verification from '../pages/Auth/Varification';
 import axios from 'axios';
 import UserContext from '../../Context/UserContext';
 import Layout from './Layout';
+import Termcondition from '../Footer/termscondition/Termcondition';
+import PrivacyPolicy from '../Footer/privacypolicy/PrivacyPolicy';
 
 
 
@@ -127,6 +129,18 @@ function MainRouting() {
     <Route path='/homesolution' element={
       <Layout>
         <HomeSolution/>
+      </Layout>
+    }
+    />
+    <Route path='/terms-of-service' element={
+      <Layout>
+        <Termcondition/>
+      </Layout>
+    }
+    />
+    <Route path='/privacy-policy' element={
+      <Layout>
+        <PrivacyPolicy/>
       </Layout>
     }
     />

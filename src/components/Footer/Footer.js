@@ -3,6 +3,7 @@ import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import logo from '../utils/asset/logos/Realtyprop.png'; // Replace with the actual path to your logo image
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const locations = ['Indirapuram', 'Vaishali', 'Noida', 'Greater Noida', 'Wave City']; // Add your actual locations
 
@@ -10,9 +11,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="logofooter">
+        <Link to='/' className="logofooter">
           <img src={logo} alt="Logo" />
-        </div>
+        </Link>
         <div className="quick-links">
           <h4>Quick Links</h4>
           <ul>
@@ -42,8 +43,8 @@ const Footer = () => {
         <div className="legal">
           <h4>Legal Information</h4>
           <ul>
-            <li><a href="/terms-of-service">Terms of Service</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><Link to="/terms-of-service">Terms of Service</Link></li>
+            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
       </div>
