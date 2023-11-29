@@ -68,6 +68,8 @@ function AllProduct() {
     }
   };
 
+ 
+
   return (
     <div className='allProduct'>
       <div className="mainsearch">

@@ -27,7 +27,7 @@ const PropertyList = ({ properties }) => {
     
     <>
     <div className="property-list">
-      {displayedProperties?.map((property, index) => (
+      {properties.length==0? <h2 style={{color:'var(--primary-color)'}}>No Properties Found!</h2> : displayedProperties?.map((property, index) => (
         <div key={index}>
           <Propertycard property={property}/>
         </div>

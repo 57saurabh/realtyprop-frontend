@@ -57,6 +57,7 @@ function LandProperty() {
       setFilteredProperties(filtered);
     }
   };
+ 
   return (
     <div className='allProuduct'>
         <div className="mainsearch">

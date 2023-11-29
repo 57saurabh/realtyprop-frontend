@@ -35,4 +35,14 @@
   }
   
   
-  
+  /* @media (max-width: 768px) {
+    .property-list {
+      width: 90%;
+     display: flex;
+     margin:1rem auto;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+      gap: 20px;
+    } */
+/* } */

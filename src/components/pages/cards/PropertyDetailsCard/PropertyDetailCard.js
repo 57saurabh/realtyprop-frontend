@@ -3,8 +3,6 @@ import './propertydetailcard.css';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import UserContext from '../../../../Context/UserContext';
-import { IoCall } from "react-icons/io5";
-import { IoLogoWhatsapp } from "react-icons/io";
 import Loader from '../../../utils/loader/Loader';
 
 const ProductDetailCard = () => {
@@ -21,7 +19,6 @@ const ProductDetailCard = () => {
         setLoading(true)
         const response = await axios.get(`https://realtyprop-backend-production.up.railway.app/property/${params.id}`);
         setListing(response.data);
-        console.log(listing)
       } catch (error) {
         console.error('Failed to fetch queries:', error);
       } finally{
@@ -95,7 +92,7 @@ const ProductDetailCard = () => {
           </>
           )
         }
-        <p><strong>Sqr.mt:</strong> {listing.squareFootage}</p>
+        <p><strong>Area:</strong> {listing.squareFootage}</p>
         <p><strong>Description:</strong> {listing.description}</p>
        {
          listing.type==='plot'?'':

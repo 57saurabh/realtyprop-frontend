@@ -12,7 +12,7 @@ const Propertycard = ({ property }) => {
       <div className="property-details">
         <h2>{property.title}</h2>
         <p className="property-location">{property.location}</p>
-        <p className='property-desc'> {property.description.split(" ").slice(0, 20).join(" ")}...</p>
+        <p className='property-desc'> {property.description.split(" ").slice(0, 10).join(" ")}...</p>
         <p className="property-price">₹ {property.price}</p>
         {/* <div className="property-features">
           {property.features.map((feature, index) => (
