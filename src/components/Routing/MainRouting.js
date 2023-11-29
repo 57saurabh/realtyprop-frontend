@@ -10,11 +10,10 @@ import AllProduct from '../pages/AllProductPage/AllProduct';
 import BuyProperty from '../pages/AllProductPage/BuyProperty';
 import Apartments from '../pages/AllProductPage/Apartments';
 import ContactUs from '../pages/contactUs/ContactUs';
-import Rentals from '../pages/AllProductPage/Rentals copy';
+import Rentals from '../pages/AllProductPage/Rentals';
 import CatogaryList from '../pages/HomePage/Catogary/CatogaryList';
 import PublicRoutes from './PublicRoutes';
 import { useState } from 'react';
-import Loader from '../utils/loader/Loader';
 import HomeSolution from '../pages/HomeSolution/HomeSolution';
 import Verification from '../pages/Auth/Varification';
 import axios from 'axios';
@@ -27,7 +26,6 @@ import ScrollToTop from './ScrollToTop';
 
 
 function MainRouting() {
-  const [loading, setLoading] = useState(false);
   const { login } = useContext(UserContext);
   // const [loding , setLoding]= useState(true);
   // const navigate = useNavigate();

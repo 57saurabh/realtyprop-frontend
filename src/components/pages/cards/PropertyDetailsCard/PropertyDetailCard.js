@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import UserContext from '../../../../Context/UserContext';
 import { IoCall } from "react-icons/io5";
 import { IoLogoWhatsapp } from "react-icons/io";
+import Loader from '../../../utils/loader/Loader';
 
 const ProductDetailCard = () => {
   const params = useParams();
@@ -59,6 +60,9 @@ const ProductDetailCard = () => {
   
 
   return (
+    <>
+    {
+      loading?<Loader/>:
     <div className="product-detail-card">
         <div className='image-container'>
       <div className="image-slider">
@@ -71,12 +75,12 @@ const ProductDetailCard = () => {
       <div className="image-thumbnails">
         {listing.images?.map((image, index) => (
           <img
-           key={index} 
-           src={image} 
-           alt={`product thumbnail ${index + 1}`} 
-           onClick={() => selectImage(index)}
-           className={currentImageIndex === index ? 'selected' : ''} />
-        ))}
+          key={index} 
+          src={image} 
+          alt={`product thumbnail ${index + 1}`} 
+          onClick={() => selectImage(index)}
+          className={currentImageIndex === index ? 'selected' : ''} />
+          ))}
       </div>
       </div>
       <div className="product-details">
@@ -119,6 +123,8 @@ const ProductDetailCard = () => {
         </div> 
       </div>
     </div>
+    }
+       </>
   );
 };
 

@@ -6,6 +6,7 @@ import dummyProperties from '../../../utils/data/dummydata';
 import { useState } from 'react';   
 import PropertyList from '../../AllProductPage/PropertyList/PropertyList';
 import axios from 'axios';
+import Loader from '../../../utils/loader/Loader';
 
 
 function CatogaryList() {
@@ -13,17 +14,22 @@ function CatogaryList() {
 
   const [properties, setProperties] = useState([]);
     const [filteredProperties, setFilteredProperties] = useState(dummyProperties);
+    const [loading,setLoading] = useState(false);
 
 
     useEffect(() => {
       const fetchProperties = async () => {
         try {
-          const response = await axios.get('http://localhost:8090/property');
+          setLoading(true)
+          const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
           const rentalProperties = response.data.filter(property => property.type ===params.id );
           setProperties(rentalProperties);
           setFilteredProperties(rentalProperties);
         } catch (error) {
           console.error('Failed to fetch properties:', error);
+        }
+        finally{
+          setLoading(false)
         }
       };
   
@@ -61,7 +67,9 @@ function CatogaryList() {
                 {capitalizedWord}
             </h2>
         </div>
-        <PropertyList properties={filteredProperties} />
+        {
+          loading ? <Loader/> : <PropertyList properties={filteredProperties} />
+        }
     </div>
   )
 }
