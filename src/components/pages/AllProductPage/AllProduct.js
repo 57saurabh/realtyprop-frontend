@@ -20,7 +20,8 @@ function AllProduct() {
       try {
         setLoading(true)
         const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
-        setProperties(response.data);
+        const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setProperties(sortedProperties);
   
         // If searchTerm exists, filter properties based on it
         if (searchTerm) {

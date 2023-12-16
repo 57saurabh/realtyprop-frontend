@@ -21,7 +21,9 @@ function Rentals() {
         try {
           setLoading(true)
           const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
-          const rentalProperties = response.data.filter(property => property.transactionType === 'rent');
+          const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+          // setProperties(sortedProperties);
+          const rentalProperties = sortedProperties.filter(property => property.transactionType === 'rent');
           setProperties(rentalProperties);
           setFilteredProperties(rentalProperties);
         } catch (error) {

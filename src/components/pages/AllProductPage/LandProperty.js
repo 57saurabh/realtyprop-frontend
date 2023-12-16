@@ -19,7 +19,9 @@ function LandProperty() {
         try {
           setLoading(true)
           const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
-          const landProperties = response.data.filter(property => property.type === 'land');
+          const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+          // setProperties(sortedProperties);
+          const landProperties = sortedProperties.filter(property => property.type === 'land');
           setProperties(landProperties);
           setFilteredProperties(landProperties);
         } catch (error) {

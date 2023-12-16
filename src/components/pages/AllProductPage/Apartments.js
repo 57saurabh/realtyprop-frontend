@@ -16,7 +16,9 @@ function Apartments() {
       const fetchProperties = async () => {
         try {
           const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
-          const apartment = response.data.filter(property => property.type === 'Apartment');
+          const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+          // setProperties(sortedProperties);
+          const apartment = sortedProperties.filter(property => property.type === 'Apartment');
           setProperties(apartment);
           setFilteredProperties(apartment);
         } catch (error) {
