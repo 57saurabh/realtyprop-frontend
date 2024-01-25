@@ -56,6 +56,18 @@ const ProductDetailCard = () => {
   };
   
 
+  const phoneNumber = '7982548409'; // Replace with the recipient's phone number
+  const productlink = `https://www.realtyprop.in/product/detail/${params.id}`
+  const message = `Hello, I want to know about this Site - ${productlink} `;
+
+  // Encode the phone number and message
+const encodedPhoneNumber = encodeURIComponent(phoneNumber);
+const encodedMessage = encodeURIComponent(message);
+
+// Create the WhatsApp link
+const whatsappLink = `https://api.whatsapp.com/send?phone=${encodedPhoneNumber}&text=${encodedMessage}`;
+
+
   return (
     <>
     {
@@ -103,13 +115,13 @@ const ProductDetailCard = () => {
          user?
          <>
          <h3>Agent Information</h3>
-          <p><strong>Name: </strong>Agent Name</p>
-          <p><strong>Phone:</strong> Agent Phone NO </p>
-          <p><strong>Email:</strong> Agent Email</p>
+          <p><strong>Name: </strong>Satender Singh</p>
+          <p><strong>Phone:</strong> +91 7982548409</p>
+          {/* <p><strong>Email:</strong> Agent Email</p> */}
         <div className="product-actions">
           
-          <a href="" className="buy-now">Call Now! </a>
-          <a href="" className="add-to-cart"> whatsApp Now!</a>
+          <a href="callto:+917982548409" className="buy-now">Call Now! </a>
+          <a href={whatsappLink} className="add-to-cart"> whatsApp Now!</a>
         </div>
           </>
         :
