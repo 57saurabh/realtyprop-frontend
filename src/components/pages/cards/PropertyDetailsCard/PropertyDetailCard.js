@@ -56,7 +56,7 @@ const ProductDetailCard = () => {
   };
   
 
-  const phoneNumber = '7982548409'; // Replace with the recipient's phone number
+  const phoneNumber = '+917982548409'; // Replace with the recipient's phone number
   const productlink = `https://www.realtyprop.in/product/detail/${params.id}`
   const message = `Hello, I want to know about this Site - ${productlink} `;
 
