@@ -26,7 +26,7 @@ const ContactUs = () => {
     }
 
     try {
-      await axios.post('https://realtyprop-backend-production.up.railway.app/queries', formData);
+      await axios.post('https://realtyprop-backend-production-d2c6.up.railway.app/queries', formData);
       toast.success('Your message has been sent!');
       resetForm();
     } catch (error) {

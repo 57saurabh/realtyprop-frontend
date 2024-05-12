@@ -14,7 +14,7 @@ function BuyProperty() {
     const fetchProperties = async () => {
       try {
         setLoading(true)
-        const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
+        const response = await axios.get('https://realtyprop-backend-production-d2c6.up.railway.app/property');
         const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
        
         const buyProperties = sortedProperties.filter(property => property.transactionType === 'Buy');

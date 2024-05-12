@@ -17,7 +17,7 @@ const ProductDetailCard = () => {
     const fetchlist = async () => {
       try {
         setLoading(true)
-        const response = await axios.get(`https://realtyprop-backend-production.up.railway.app/property/${params.id}`);
+        const response = await axios.get(`https://realtyprop-backend-production-d2c6.up.railway.app/property/${params.id}`);
         setListing(response.data);
       } catch (error) {
         console.error('Failed to fetch queries:', error);

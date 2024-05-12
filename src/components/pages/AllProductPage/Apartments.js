@@ -15,7 +15,7 @@ function Apartments() {
     useEffect(() => {
       const fetchProperties = async () => {
         try {
-          const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
+          const response = await axios.get('https://realtyprop-backend-production-d2c6.up.railway.app/property');
           const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
           // setProperties(sortedProperties);
           const apartment = sortedProperties.filter(property => property.type === 'Apartment');

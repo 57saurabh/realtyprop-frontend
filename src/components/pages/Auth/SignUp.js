@@ -43,7 +43,7 @@ const SignUp = () => {
         password: signUpFormData.password,
       };
   
-      const response = await axios.post("https://realtyprop-backend-production.up.railway.app/auth/register", formData);
+      const response = await axios.post("https://realtyprop-backend-production-d2c6.up.railway.app/auth/register", formData);
   
       const successMessage = response.data.message || "Sign-up successful!";
       displayToastMessage(successMessage, "success");
@@ -92,7 +92,7 @@ const SignUp = () => {
 
   // const sendVerificationEmail = async (email) => {
   //   try {
-  //     await axios.post('https://realtyprop-backend-production.up.railway.app/auth/send-verification-email', { email });
+  //     await axios.post('https://realtyprop-backend-production-d2c6.up.railway.app/auth/send-verification-email', { email });
   //     // Redirect to a page indicating that a verification email has been sent
   //   } catch (error) {
   //     // Handle error in sending verification email

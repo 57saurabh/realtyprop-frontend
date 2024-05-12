@@ -19,7 +19,7 @@ const PropertyListings = () => {
     const fetchlist = async () => {
       try {
         setLoading(true)
-        const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property', {
+        const response = await axios.get('https://realtyprop-backend-production-d2c6.up.railway.app/property', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

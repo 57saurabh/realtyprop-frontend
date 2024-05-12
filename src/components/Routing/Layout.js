@@ -12,7 +12,7 @@ function Layout({children}) {
     const validateToken = async()=>{
       try {
         setLoading(true)
-        const response = await axios.post("https://realtyprop-backend-production.up.railway.app/auth/get-user-by-id",{},{
+        const response = await axios.post("https://realtyprop-backend-production-d2c6.up.railway.app/auth/get-user-by-id",{},{
           headers:{
             Authorization:  `Bearer ${localStorage.getItem('token')}`
           }

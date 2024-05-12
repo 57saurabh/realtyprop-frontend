@@ -23,7 +23,7 @@ class Verification extends React.Component {
     const { token } = this.props;
     try {
       this.setState({ loading: true });
-      const response = await axios.post('https://realtyprop-backend-production.up.railway.app/auth/verify-email', { token });
+      const response = await axios.post('https://realtyprop-backend-production-d2c6.up.railway.app/auth/verify-email', { token });
       console.log('Email verified:', response.data);
       if (response.data) {
         this.setState({ check: true });

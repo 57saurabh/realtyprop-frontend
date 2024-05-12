@@ -21,7 +21,7 @@ function CatogaryList() {
       const fetchProperties = async () => {
         try {
           setLoading(true)
-          const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
+          const response = await axios.get('https://realtyprop-backend-production-d2c6.up.railway.app/property');
           const rentalProperties = response.data.filter(property => property.type ===params.id );
           setProperties(rentalProperties);
           setFilteredProperties(rentalProperties);
